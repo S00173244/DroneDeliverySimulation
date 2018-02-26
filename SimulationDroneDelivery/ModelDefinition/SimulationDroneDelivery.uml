@@ -3,6 +3,88 @@
   dslVersion="1.0.0.0"
   Id="3f1a7049-f46a-40fd-8fee-d19754e80367"
   name="SimulationDroneDelivery" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="6298d14a-3b44-4fd6-9eee-717694caa449"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="a504b881-fd13-4b1f-8dc8-801bb407b517">
+          <propertyInstance
+            Id="0f1f7b30-2c4c-40e8-aea6-48ef9726ed41"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="e2e2ca82-88cd-4f1f-9bd8-6b3c0210cd9f">
+          <propertyInstance
+            Id="eff5c668-50e2-4c14-8fd0-9e678b6ff933"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="f77f0cb0-61e8-4688-a189-f961127a5460">
+          <propertyInstance
+            Id="13127c1c-f17a-4fcf-a306-7e91da381121"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="c394c767-5350-49f4-951c-6ad1d991dff3"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="80bde5c0-96ff-47b7-8c01-ec815db15acf">
+          <propertyInstance
+            Id="42bf52d3-938c-4090-af4d-2ec051649ead"
+            name="Alias"
+            value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="c87a8f55-a7ee-4de9-88e8-bfab60a65081">
+          <propertyInstance
+            Id="6986c612-003e-40a1-955c-80de9a4875c4"
+            name="TemplateFilePath"
+            value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="22f75399-247f-4d92-8944-80beb3cc48c5">
+          <propertyInstance
+            Id="ac6da258-6545-4b79-a819-c7aa8a38b246"
+            name="ProjectPath"
+            value="ClassTemplate=..\SimulationDroneDeliveryLib\SimulationDroneDeliveryLib.csproj|EnumTemplate=..\SimulationDroneDeliveryLib\SimulationDroneDeliveryLib.csproj|InterfaceTemplate=..\SimulationDroneDeliveryLib\SimulationDroneDeliveryLib.csproj|StructTemplate=..\SimulationDroneDeliveryLib\SimulationDroneDeliveryLib.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="8f1cd1e9-0533-40c2-8fb8-8cbb0a85b5a8">
+          <propertyInstance
+            Id="5b5b223a-c585-41e8-af85-1fe4fa062b49"
+            name="TargetDirectory"
+            value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="00a6ea3c-26a3-417c-90e8-dcd69d69e8d4">
+          <propertyInstance
+            Id="992875a9-d9b1-4748-83a0-847942df36e0"
+            name="TargetName"
+            value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="c8a9895b-e197-4402-87a5-373e83c6982e">
+          <propertyInstance
+            Id="45a99863-32b7-4bc4-8da0-a4d4affcf1a8"
+            name="Overwrite"
+            value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="21b1c3c2-d0e9-45b7-ac3c-9081ff6db77c">
+          <propertyInstance
+            Id="31a20478-59bf-4ce5-bbfd-35bedd948669"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -16,6 +98,18 @@
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
     </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="931cae3a-c499-48e2-96f9-18ec0d3f1acc">
+      <profileInstance
+        Id="21e0acc3-dd67-4fce-8e8f-2b05ea9d8ac2"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="be893cb1-1009-4ae1-8049-5a00c816e313">
+      <profileInstance
+        Id="8ef0043f-e418-436e-851c-a1dd6b7a7cd3"
+        name="TextTemplateBindings" />
+    </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
@@ -25,6 +119,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="bf5aac8f-b9f8-4ae7-8e85-6e1cf45725fa">
+            <interfaceMoniker
+              Id="2df29828-2754-4a9c-8d59-94feace41bf3"
+              LastKnownName="DroneDeliverySimulationComponent"
+              LastKnownLocation="SimulationDroneDelivery.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="e3b43627-094a-4bad-9ac9-505f03be25d8"
@@ -100,6 +203,23 @@
               <undefinedTypeMoniker
                 Id="2e0c3892-6a6f-46d2-b22f-85bf70f69e15"
                 LastKnownName="List&lt;Drone&gt;"
+                LastKnownLocation="SimulationDroneDelivery.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2f88f2f3-d875-4651-b641-756609c45393"
+            name="ID"
+            isLeaf="true"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
                 LastKnownLocation="SimulationDroneDelivery.uml" />
             </type_NamedElement>
           </property>
@@ -196,6 +316,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="ec2edea4-d687-44da-a130-842492f0785c">
+            <interfaceMoniker
+              Id="2df29828-2754-4a9c-8d59-94feace41bf3"
+              LastKnownName="DroneDeliverySimulationComponent"
+              LastKnownLocation="SimulationDroneDelivery.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="defc317d-69f4-4404-9b4e-639693f9bd8d"
@@ -299,6 +428,24 @@
                 LastKnownLocation="SimulationDroneDelivery.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="9e15ef1c-e01e-422b-8b74-19baf3c292cf"
+            name="ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="SimulationDroneDelivery.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -360,6 +507,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="523b1a1a-68c3-4ec6-879e-7b8a4843f1fc">
+            <interfaceMoniker
+              Id="2df29828-2754-4a9c-8d59-94feace41bf3"
+              LastKnownName="DroneDeliverySimulationComponent"
+              LastKnownLocation="SimulationDroneDelivery.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="a041dc08-558e-4d8b-8fe2-b5c29f235d9b"
@@ -476,7 +632,7 @@
             isAbstract="false">
             <classMoniker
               Id="61076446-8632-4f3e-919f-f18be633638b"
-              LastKnownName="Order"
+              LastKnownName="Instruction"
               LastKnownLocation="SimulationDroneDelivery.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -639,7 +795,7 @@
           </property>
           <property
             Id="0b015902-5769-456a-b6f3-d1520d0519c6"
-            name="Orders"
+            name="Instruction"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -649,8 +805,26 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="d6ca63b3-caaa-41aa-9993-c091019f020b"
-                LastKnownName="List &lt;Order&gt;"
+                Id="b9676adb-e594-45a1-a026-8b53fe6b6cf7"
+                LastKnownName="List &lt;Instruction&gt;"
+                LastKnownLocation="SimulationDroneDelivery.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="89be78cd-652e-4c9a-abe2-09eae7e55c2f"
+            name="ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
                 LastKnownLocation="SimulationDroneDelivery.uml" />
             </type_NamedElement>
           </property>
@@ -774,7 +948,7 @@
                   <type_NamedElement>
                     <classMoniker
                       Id="61076446-8632-4f3e-919f-f18be633638b"
-                      LastKnownName="Order"
+                      LastKnownName="Instruction"
                       LastKnownLocation="SimulationDroneDelivery.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -1088,7 +1262,7 @@
     <packageHasNamedElement>
       <class
         Id="61076446-8632-4f3e-919f-f18be633638b"
-        name="Order"
+        name="Instruction"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -1245,10 +1419,13 @@
             name="PickUpPackage" />
           <enumerationLiteral
             Id="ec8155fd-8461-420b-8736-d0b8d2f35fa1"
-            name="MoveTo" />
+            name="MoveToALocation" />
           <enumerationLiteral
             Id="51641137-8c5e-45de-b2dc-c24e97e0304a"
             name="StandIdle" />
+          <enumerationLiteral
+            Id="2bbb6de1-dccc-4271-b468-0f9857c37342"
+            name="MoveToWarehouse" />
         </ownedLiterals>
       </enumeration>
     </packageHasNamedElement>
@@ -1266,20 +1443,20 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="ff08eee3-5585-44c0-8f5b-f90183948da8"
+            Id="d0d76b5a-7e3c-45d2-b6e2-278aaf53709a"
             isDerived="false"
             sourceEndRoleName="DroneDeliverySimulation"
-            targetEndRoleName="ControlCenter"
+            targetEndRoleName="DroneDeliverySimulationComponent"
             isLeaf="false"
             isAbstract="false">
-            <classMoniker
-              Id="64154773-22c4-4bff-8646-adfccdf0dc96"
-              LastKnownName="ControlCenter"
+            <interfaceMoniker
+              Id="2df29828-2754-4a9c-8d59-94feace41bf3"
+              LastKnownName="DroneDeliverySimulationComponent"
               LastKnownLocation="SimulationDroneDelivery.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="067a3cca-6320-47e3-8e5e-a27008d072f9"
+                  Id="6c8a9f98-ae7d-44d4-8481-11b13da490a4"
                   name="DroneDeliverySimulation"
                   isLeaf="false"
                   isStatic="false"
@@ -1288,25 +1465,12 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="de71ece3-1098-4e02-9745-d93cd1ce1dc5"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="829ffe58-b702-4871-9517-40995a0b6ce4"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
+                  isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="4a928dd2-0751-47d1-8565-343aab2db4fc"
-                  name="ControlCenter"
+                  Id="595cb7cf-2ac1-4147-84e9-b62c3fa9b35c"
+                  name="DroneDeliverySimulationComponent"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1317,13 +1481,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="be9c7373-8c50-4a98-a15e-a2c4151a0740"
+                      Id="c56984cb-cd3a-4a26-bd7e-4816ef312de0"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="f488d8f1-3323-4f3b-ab1a-f8672033bbea"
+                      Id="d4d0467c-3776-49b0-bd63-2863c485b553"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -1343,6 +1507,56 @@
             isQuery="false" />
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="2df29828-2754-4a9c-8d59-94feace41bf3"
+        name="DroneDeliverySimulationComponent"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="b9573b36-bb06-4aaf-9166-fb02d031b2f9"
+            name="ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="SimulationDroneDelivery.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="e60305e2-11e5-469d-bc3b-fe7ebefda688"
+            name="Log"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="fcef972c-e048-4550-bc06-315cd02dea4f"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b9676adb-e594-45a1-a026-8b53fe6b6cf7"
+        name="List &lt;Instruction&gt;" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

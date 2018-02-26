@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DroneDeliverySimulation
 {
-    public class ControlCenter
+    public class ControlCenter : DroneDeliverySimulationComponent
     {
         private List<Drone> droneList;
         private List<Warehouse> warehouseList;

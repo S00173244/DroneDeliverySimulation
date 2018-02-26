@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Numerics;
+using Microsoft;
 namespace DroneDeliverySimulation
 {
 
 
-    public class Warehouse
+    public class Warehouse : DroneDeliverySimulationComponent
     {
-
+        
         private List<Package> packageList;
         private ControlCenter controlcenter;
         public Warehouse()
@@ -15,6 +16,8 @@ namespace DroneDeliverySimulation
 
         }
 
+
+        #region Accessors
         public List<Package> PackageList
         {
             get
@@ -28,6 +31,20 @@ namespace DroneDeliverySimulation
             }
         }
 
+        public ControlCenter Controlcenter
+        {
+            get
+            {
+                return controlcenter;
+            }
+
+            set
+            {
+                controlcenter = value;
+            }
+        }
+
+        #endregion
         public void CreatePackages()
         {
 
