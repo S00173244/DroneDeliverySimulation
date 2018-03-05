@@ -10,6 +10,14 @@ namespace DroneDeliverySimulation
     {
         static void Main(string[] args)
         {
+
+            DroneDeliverySimulation simulation = new DroneDeliverySimulation();
+
+            do
+            {
+                simulation.RunSimulation();
+            } while (true);
+            
         }
     }
 }

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DroneDeliverySimulation
 {
-    public interface DroneDeliverySimulationComponent
+    public interface IDroneDeliverySimulationComponent
     {
+
         void Update();
         void Log();
 

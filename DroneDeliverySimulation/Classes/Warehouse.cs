@@ -2,18 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.Numerics;
 using Microsoft;
+using BasicVector;
 namespace DroneDeliverySimulation
 {
 
 
-    public class Warehouse : DroneDeliverySimulationComponent
+    public class Warehouse : IDroneDeliverySimulationComponent
     {
         
         private List<Package> packageList;
         private ControlCenter controlcenter;
+        private Vector coordinates;
         public Warehouse()
         {
-
+           
         }
 
 
@@ -45,10 +47,7 @@ namespace DroneDeliverySimulation
         }
 
         #endregion
-        public void CreatePackages()
-        {
-
-        }
+        
 
         public void Update()
         {
