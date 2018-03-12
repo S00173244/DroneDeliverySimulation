@@ -83,6 +83,8 @@ namespace DroneDeliverySimulation
                 {
                     warehouse.PackageList.Add(new Package(new Recipient(), rn.Next(1,20)));
                 }
+
+                warehouse.PackagesAwaitingForDronePickup = new List<Package>();
                 return true;
             }
             catch (Exception e)

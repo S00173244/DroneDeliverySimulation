@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DroneDeliverySimulation.Classes;
+using System;
 using System.Collections.Generic;
 
 namespace DroneDeliverySimulation
@@ -7,6 +8,7 @@ namespace DroneDeliverySimulation
     {
         private List<Drone> droneList;
         private List<Warehouse> warehouseList;
+        private Queue<WarehouseRequest> warehouseRequests;
         public ControlCenter()
         {
             
@@ -39,9 +41,27 @@ namespace DroneDeliverySimulation
             }
         }
 
+        public Queue<WarehouseRequest> WarehouseRequests
+        {
+            get
+            {
+                return warehouseRequests;
+            }
+
+            set
+            {
+                warehouseRequests = value;
+            }
+        }
+
         #endregion
 
-        
+        public bool AddAWarehouseRequestToTheList(WarehouseRequest warehouseRequest)
+        {
+            WarehouseRequests.Enqueue(warehouseRequest);
+            return true;
+        }
+
         public bool AddAWarehouseToTheControlCenter(Warehouse warehouse)
         {
             
@@ -68,10 +88,38 @@ namespace DroneDeliverySimulation
             else return false;
         }
 
-        public void FindTheNearestDroneToTheWarehouse(Warehouse warehouse)
+
+        public void ExecuteAWarehouseRequest(WarehouseRequest warehouseRequest)
         {
+            WarehouseRequest currentWarehouseRequest = warehouseRequest;
+            List<Drone> dronesWithEnoughCarrySpace = DroneList.FindAll(c => c.CurrentCarryWeight > currentWarehouseRequest.Package.Weight);
+            if (dronesWithEnoughCarrySpace.Count <= 0) WarehouseRequests.Enqueue(WarehouseRequests.Dequeue());
+            else
+            {
+                Drone drone = FindTheNearestDroneToTheWarehouseFromADroneList(warehouseRequest.Warehouse, dronesWithEnoughCarrySpace);
+                drone.AddAnOrderToTheQueue(new Order());
+            }
 
         }
+
+       
+        public Drone FindTheNearestDroneToTheWarehouseFromADroneList(Warehouse warehouse, List<Drone> droneList)
+        {
+            Drone drone = new Drone();
+            double shortestDistance = 0;
+            foreach (Drone item in DroneList)
+            {
+                double distance = MathHelper.DistanceBetweenTwoVectors(item.Coordinates, warehouse.Coordinates);
+                if(shortestDistance > distance)
+                {
+                    shortestDistance = distance;
+                    drone = item;
+                }
+            }
+
+            return drone;
+        }
+
 
         public bool IssueOrderToDrone()
         {
@@ -80,14 +128,18 @@ namespace DroneDeliverySimulation
 
         public void Update()
         {
-            foreach (Drone item in droneList)
+            if (!IsWarehouseRequestsEmpty())
             {
-                item.Update(); 
+                
             }
-            foreach (Warehouse item in warehouseList)
-            {
-                item.Update();
-            }
+        }
+
+
+
+        public bool IsWarehouseRequestsEmpty()
+        {
+            if (WarehouseRequests.Count <= 0) return true;
+            else return false;
         }
 
         public void Log()

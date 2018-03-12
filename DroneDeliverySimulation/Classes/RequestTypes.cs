@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace DroneDeliverySimulation
 {
-    public class Recipient
+    public class RequestTypes
     {
-        
+        public enum Types { RequestADroneForDelivery };
+        public Types Type { get; set; }
     }
 }

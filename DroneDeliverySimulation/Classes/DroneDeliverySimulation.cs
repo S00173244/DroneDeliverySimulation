@@ -9,14 +9,26 @@ namespace DroneDeliverySimulation
     public class DroneDeliverySimulation 
     {
         ControlCenter controlCenter;
-    
+
+        int totalTicks = 100;
+        int startingTick = 0;
+
         public void RunSimulation()
         {
-            if (controlCenter != null)
+
+            do
             {
-                controlCenter.Update();
-            }
-            else SimulationInitializer.SetupAControlCenter(ref controlCenter);
+                if (controlCenter != null)
+                {
+                    controlCenter.Update();
+                    controlCenter.DroneList.ForEach(drone => drone.Update());
+                    controlCenter.WarehouseList.ForEach(warehouse => warehouse.Update());
+
+                }
+                else SimulationInitializer.SetupAControlCenter(ref controlCenter);
+            } while ((startingTick++) < 100);
+            
+           
         }     
     }
 
