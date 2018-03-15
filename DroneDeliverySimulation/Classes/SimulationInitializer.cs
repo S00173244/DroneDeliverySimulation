@@ -14,22 +14,24 @@ namespace DroneDeliverySimulation
         
        public static bool SetupAControlCenter(ref ControlCenter controlCenter)
         {
-            if (GenerateSimulationComponentsForAControlCenter(controlCenter, 5, 5)) return true;
+            controlCenter = new ControlCenter();
+            if (GenerateSimulationComponentsForAControlCenter(ref controlCenter, 5, 5)) return true;
             else return false;
         }
 
-        public static bool GenerateSimulationComponentsForAControlCenter(ControlCenter controlCenter, int numberOfDrones, int numberOfWarehouses)
+        public static bool GenerateSimulationComponentsForAControlCenter(ref ControlCenter controlCenter, int numberOfDrones, int numberOfWarehouses)
         {
-            if (CreateDronesForAControlCenter(controlCenter, numberOfDrones) && CreateWarehousesForAControlCenter(controlCenter, numberOfWarehouses)) return true;
+            if (CreateDronesForAControlCenter(ref controlCenter, numberOfDrones) && CreateWarehousesForAControlCenter(controlCenter, numberOfWarehouses)) return true;
             else return false;
             
         }
 
-        public static bool CreateDronesForAControlCenter(ControlCenter controlCenter, int numberOfDrones)
+        public static bool CreateDronesForAControlCenter(ref ControlCenter controlCenter, int numberOfDrones)
         {
 
             try
             {
+                controlCenter.DroneList = new List<Drone>();
                 for (int i = 0; i < numberOfDrones; i++)
                 {
                     controlCenter.DroneList.Add(new Drone());
@@ -55,6 +57,7 @@ namespace DroneDeliverySimulation
         {
             try
             {
+                controlCenter.WarehouseList = new List<Warehouse>();
                 for (int i = 0; i < numberOfWarehouses; i++)
                 {
                     Warehouse warehouse = new Warehouse();
@@ -63,6 +66,7 @@ namespace DroneDeliverySimulation
 
                 }
 
+                
                 return true;
             }
 
@@ -79,6 +83,7 @@ namespace DroneDeliverySimulation
         {
             try
             {
+                warehouse.PackageList = new List<Package>();
                 for (int i = 0; i < 10; i++)
                 {
                     warehouse.PackageList.Add(new Package(new Recipient(), rn.Next(1,20)));

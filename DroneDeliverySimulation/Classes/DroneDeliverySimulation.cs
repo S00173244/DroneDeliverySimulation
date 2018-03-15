@@ -21,12 +21,12 @@ namespace DroneDeliverySimulation
                 if (controlCenter != null)
                 {
                     controlCenter.Update();
-                    controlCenter.DroneList.ForEach(drone => drone.Update());
+                    //controlCenter.DroneList.ForEach(drone => drone.Update());
                     controlCenter.WarehouseList.ForEach(warehouse => warehouse.Update());
 
                 }
                 else SimulationInitializer.SetupAControlCenter(ref controlCenter);
-            } while ((startingTick++) < 100);
+            } while ((startingTick++) < 2);
             
            
         }     

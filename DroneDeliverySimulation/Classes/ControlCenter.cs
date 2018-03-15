@@ -8,7 +8,7 @@ namespace DroneDeliverySimulation
     {
         private List<Drone> droneList;
         private List<Warehouse> warehouseList;
-        private Queue<WarehouseRequest> warehouseRequests;
+        private Queue<WarehouseRequest> warehouseRequests = new Queue<WarehouseRequest>();
         public ControlCenter()
         {
             
